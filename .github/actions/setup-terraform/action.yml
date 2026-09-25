@@ -1,0 +1,45 @@
+name: Setup Terraform
+description: Install Terraform and run init for a given environment
+
+inputs:
+  environment:
+    description: Target environment (dev, prod)
+    required: true
+    default: dev
+  tool-versions-file:
+    description: Path to the .tool-versions file containing the pinned terraform version
+    required: false
+    default: .tool-versions
+
+outputs:
+  terraform-version:
+    description: The Terraform version that was installed
+    value: ${{ steps.version.outputs.terraform_version }}
+
+runs:
+  using: composite
+  steps:
+    - name: Read pinned Terraform version
+      id: version
+      shell: bash
+      run: |
+        VERSION=$(grep -E '^terraform[[:space:]]' "${{ inputs.tool-versions-file }}" | awk '{print $2}')
+        if [ -z "$VERSION" ]; then
+          echo "ERROR: Could not find a 'terraform' entry in ${{ inputs.tool-versions-file }}" >&2
+          exit 1
+        fi
+        echo "terraform_version=$VERSION" >> "$GITHUB_OUTPUT"
+
+    - name: Setup Terraform
+      id: setup
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: ${{ steps.version.outputs.terraform_version }}
+        terraform_wrapper: true
+
+    - name: Terraform Init
+      shell: bash
+      working-directory: terraform
+      run: |
+        terraform init \
+          -backend-config=environments/${{ inputs.environment }}/backend.tfvars

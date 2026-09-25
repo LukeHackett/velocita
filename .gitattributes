@@ -1,0 +1,12 @@
+# Terraform files - enforce LF line endings
+*.tf text eol=lf
+*.tfvars text eol=lf
+
+# HCL files - enforce LF line endings
+*.hcl text eol=lf
+
+# Terraform lock file - mark as generated to exclude from language stats
+.terraform.lock.hcl linguist-generated=true
+
+# Terraform plan files - mark as binary
+tfplan-* binary

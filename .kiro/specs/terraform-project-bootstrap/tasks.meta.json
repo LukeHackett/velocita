@@ -1,0 +1,941 @@
+{
+  "pbtResults": {
+    "3.6 Write property test for backend config completeness": {
+      "status": "passed",
+      "lastRunTimestamp": 1790195411722
+    },
+    "11.4 Write property test for provider lock file consistency": {
+      "status": "passed",
+      "lastRunTimestamp": 1790195442892
+    },
+    "11.3 Write property test for Terraform configuration validity": {
+      "status": "passed",
+      "lastRunTimestamp": 1790195560015
+    },
+    "13.2 Write property test for lock file presence and format": {
+      "status": "passed",
+      "lastRunTimestamp": 1790195646339
+    }
+  },
+  "executionHistory": {
+    "1.1 Create directory structure and tracked placeholder files": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836195
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191849876
+      }
+    ],
+    "1.2 Create root-level `.gitattributes` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836271
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191849899
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790192950464
+      }
+    ],
+    "1.3 Create root-level `.editorconfig` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836301
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191851572
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790192950432
+      }
+    ],
+    "1.4 Create root-level `.gitignore` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836336
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191851619
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790192952397
+      }
+    ],
+    "1.5 Create root-level `README.md` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836371
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191851637
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790192952422
+      }
+    ],
+    "1.6 Create root-level `LICENSE` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836405
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191851682
+      },
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790192952767
+      }
+    ],
+    "2.1 Create `.terraform-version` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836437
+      },
+      {
+        "executionId": "defbda82-d9e1-445d-972d-4887dcd641e8",
+        "chatSessionId": "sess_7d1f40b0-8675-4574-9cb5-402cb888875c",
+        "timestamp": 1790193974546
+      },
+      {
+        "executionId": "defbda82-d9e1-445d-972d-4887dcd641e8",
+        "chatSessionId": "sess_7d1f40b0-8675-4574-9cb5-402cb888875c",
+        "timestamp": 1790194209604
+      }
+    ],
+    "2.3 Create `terraform/versions.tf` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836503
+      },
+      {
+        "executionId": "defbda82-d9e1-445d-972d-4887dcd641e8",
+        "chatSessionId": "sess_7d1f40b0-8675-4574-9cb5-402cb888875c",
+        "timestamp": 1790193975231
+      },
+      {
+        "executionId": "defbda82-d9e1-445d-972d-4887dcd641e8",
+        "chatSessionId": "sess_7d1f40b0-8675-4574-9cb5-402cb888875c",
+        "timestamp": 1790194210219
+      }
+    ],
+    "2.4 Write property test for version consistency": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836535
+      },
+      {
+        "executionId": "defbda82-d9e1-445d-972d-4887dcd641e8",
+        "chatSessionId": "sess_7d1f40b0-8675-4574-9cb5-402cb888875c",
+        "timestamp": 1790193975676
+      },
+      {
+        "executionId": "defbda82-d9e1-445d-972d-4887dcd641e8",
+        "chatSessionId": "sess_7d1f40b0-8675-4574-9cb5-402cb888875c",
+        "timestamp": 1790194210364
+      }
+    ],
+    "3.1 Create `terraform/backend.tf` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836622
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339403
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194343404
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194378353
+      }
+    ],
+    "3.2 Create `terraform/environments/dev/backend.tfvars` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836652
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339436
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194343778
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194378514
+      }
+    ],
+    "3.3 Create `terraform/environments/prod/backend.tfvars` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836680
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339468
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194344118
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194378912
+      }
+    ],
+    "3.4 Create `terraform/environments/dev/terraform.tfvars` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836712
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339502
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194344528
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194379276
+      }
+    ],
+    "3.5 Create `terraform/environments/prod/terraform.tfvars` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836747
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339527
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194344819
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194379565
+      }
+    ],
+    "3.6 Write property test for backend config completeness": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836781
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339551
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195384787
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195570857
+      }
+    ],
+    "4.1 Create `.pre-commit-config.yaml` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836812
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339578
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194385560
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194516231
+      }
+    ],
+    "4.2 Create `.tflint.hcl` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836844
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339604
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194385865
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194516361
+      }
+    ],
+    "5.1 Create `Makefile` at repository root": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836876
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339633
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194518837
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194643400
+      }
+    ],
+    "5.2 Add bootstrap and helper targets to Makefile": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836904
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339659
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194519076
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194643596
+      }
+    ],
+    "6.1 Create `.github/actions/aws-oidc-auth/action.yml` composite action": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836956
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339683
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194646044
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194696781
+      }
+    ],
+    "6.2 Create `.github/actions/setup-terraform/action.yml` composite action": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191836981
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339711
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194646263
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194697092
+      }
+    ],
+    "7.1 Create `.github/workflows/pre-merge.yml` workflow file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837006
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339736
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194699877
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194982812
+      }
+    ],
+    "7.2 Implement `lint` job in pre-merge workflow": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837032
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339765
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194700263
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194983326
+      }
+    ],
+    "7.3 Implement `security` job in pre-merge workflow": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837057
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339800
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194700610
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194983443
+      }
+    ],
+    "7.4 Implement `plan` job in pre-merge workflow": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837116
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339825
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194701018
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194983874
+      }
+    ],
+    "7.5 Implement `comment` job in pre-merge workflow": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837141
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339851
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194701245
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194984099
+      }
+    ],
+    "7.6 Implement job parallelism in pre-merge workflow": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837167
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339876
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194987171
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195124930
+      }
+    ],
+    "7.7 Pin GitHub Actions versions in pre-merge workflow": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837191
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339901
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194986858
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195124715
+      }
+    ],
+    "8.1 Create `.github/workflows/post-merge.yml` workflow file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837259
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339924
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195128241
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195171609
+      }
+    ],
+    "8.2 Implement sequential verification steps in post-merge workflow": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837285
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339949
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195128024
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195172059
+      }
+    ],
+    "8.3 Pin GitHub Actions versions in post-merge workflow": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837311
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194339977
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195127632
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195172895
+      }
+    ],
+    "9.1 Create `.github/dependabot.yml` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837369
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340000
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195177048
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195199860
+      }
+    ],
+    "10.1 Create `bootstrap/cloudformation.yml` file": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837395
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340021
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195202309
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195230842
+      }
+    ],
+    "11.1 Create `terraform/test/` directory and Go module files": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837420
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340048
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195233455
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195382125
+      }
+    ],
+    "11.2 Create example test scaffold in `terraform/test/bootstrap_test.go`": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837455
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340070
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195233171
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195381847
+      }
+    ],
+    "11.3 Write property test for Terraform configuration validity": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837486
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340099
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195385132
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195571244
+      }
+    ],
+    "11.4 Write property test for provider lock file consistency": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837519
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340121
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195385306
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195571458
+      }
+    ],
+    "12. Checkpoint - Verify foundational setup": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837550
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340149
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195658788
+      }
+    ],
+    "13.1 Manual step: Run `make init ENV=dev`": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837582
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340171
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195579688
+      }
+    ],
+    "13.2 Write property test for lock file presence and format": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837609
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340201
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195582156
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195656004
+      }
+    ],
+    "14. Final checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "b7d1fab3-4845-4d14-9598-0bd8abe63825",
+        "chatSessionId": "sess_1eb9000d-88af-4377-8d3a-f7a064eb74fe",
+        "timestamp": 1790191837637
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194340241
+      },
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195660984
+      }
+    ],
+    "2. Set up Terraform version pinning and provider constraints": [
+      {
+        "executionId": "defbda82-d9e1-445d-972d-4887dcd641e8",
+        "chatSessionId": "sess_7d1f40b0-8675-4574-9cb5-402cb888875c",
+        "timestamp": 1790194210396
+      }
+    ],
+    "3. Set up remote state backend configuration": [
+      {
+        "executionId": "d33e844a-b368-4fce-959a-95e106647801",
+        "chatSessionId": "sess_24573f47-8854-4c45-ad26-aa77cd958a33",
+        "timestamp": 1790194234820
+      },
+      {
+        "executionId": "d33e844a-b368-4fce-959a-95e106647801",
+        "chatSessionId": "sess_24573f47-8854-4c45-ad26-aa77cd958a33",
+        "timestamp": 1790194306718
+      }
+    ],
+    "4. Set up pre-commit hooks and linting configuration": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194516396
+      }
+    ],
+    "5. Create Makefile with developer targets": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194643631
+      }
+    ],
+    "6. Create GitHub Actions composite actions": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790194697125
+      }
+    ],
+    "7. Create GitHub Actions pre-merge workflow with multi-job architecture": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195124974
+      }
+    ],
+    "8. Create GitHub Actions post-merge workflow": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195172931
+      }
+    ],
+    "9. Create GitHub Dependabot configuration": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195199899
+      }
+    ],
+    "10. Create CloudFormation backend bootstrap template": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195230882
+      }
+    ],
+    "11. Set up Terratest unit testing framework": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195571487
+      }
+    ],
+    "13. Initialize Terraform and generate lock file": [
+      {
+        "executionId": "9391fa71-a8f6-4267-9540-2f4c0a6ddeb1",
+        "chatSessionId": "sess_850621bd-ad64-4a11-ba8d-98f63f4452e1",
+        "timestamp": 1790195656034
+      }
+    ]
+  }
+}

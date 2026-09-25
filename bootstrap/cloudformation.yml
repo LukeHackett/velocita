@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Terraform remote state backend resources for the velocita project.
+  Creates an S3 bucket for state storage and a DynamoDB table for state locking.
+
+Parameters:
+  Environment:
+    Type: String
+    AllowedValues:
+      - dev
+      - prod
+    Description: Deployment environment
+
+  ProjectName:
+    Type: String
+    Default: velocita
+    Description: Project name used as a prefix for all resource names
+
+Resources:
+  TerraformStateBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${ProjectName}-${Environment}-terraform-state"
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  TerraformLockTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub "${ProjectName}-${Environment}-terraform-locks"
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: LockID
+          AttributeType: S
+      KeySchema:
+        - AttributeName: LockID
+          KeyType: HASH
+
+Outputs:
+  StateBucketName:
+    Value: !Ref TerraformStateBucket
+    Export:
+      Name: !Sub "${ProjectName}-${Environment}-terraform-state-bucket"
+
+  LockTableName:
+    Value: !Ref TerraformLockTable
+    Export:
+      Name: !Sub "${ProjectName}-${Environment}-terraform-lock-table"

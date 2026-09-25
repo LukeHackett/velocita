@@ -1,0 +1,14 @@
+# Go build output
+*.exe
+*.exe~
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Go test output
+*.test
+*.out
+
+# Go module cache
+go.work.sum
