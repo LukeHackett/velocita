@@ -1,0 +1,14 @@
+# Terraform
+.terraform/
+
+# Terraform plan files
+tfplan-*
+
+# Terraform variable overrides
+*.auto.tfvars
+
+# Terraform crash logs
+crash.log
+
+# Terraform state files
+.terraform.tfstate*

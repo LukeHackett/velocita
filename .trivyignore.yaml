@@ -1,0 +1,16 @@
+# Trivy Ignore Configuration
+#
+# This file allows whitelisting of Trivy security findings.
+# Use sparingly and document the reason for each exception.
+#
+# Format:
+# - vulnerability_id: CVE-XXXX-XXXXX
+#   reason: "Brief explanation of why this is acceptable"
+#   expires: YYYY-MM-DD (optional)
+#
+# Example (commented out):
+# - vulnerability_id: AVD-AWS-0001
+#   reason: "This is a false positive in our specific context because..."
+#   expires: 2025-12-31
+
+# Add exceptions below as needed
